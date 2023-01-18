@@ -1,0 +1,25 @@
+int numbersCount = int.Parse(Console.ReadLine());
+            int leftSum = 0;
+            int rightSum = 0;
+            for (int I = 1; I <= numbersCount; I++)
+            {
+                int firstNum = int.Parse(Console.ReadLine());
+                int secondNum = int.Parse(Console.ReadLine());
+
+                if (I % 2 == 0)
+                {
+                    leftSum = firstNum + secondNum;
+                }
+                else
+                {
+                    rightSum = firstNum + secondNum;
+                }
+            }
+            if(leftSum == rightSum)
+            {
+                Console.WriteLine($"Yes, sum = {leftSum}");
+            }
+            else
+            {
+                Console.WriteLine($"No, diff = {Math.Abs(leftSum - rightSum)}");
+            }
